@@ -1,0 +1,65 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "FirstAppStack": {
+        "id": "FirstAppStack",
+        "path": "FirstAppStack",
+        "children": {
+          "MyFirstCdkAppBucket": {
+            "id": "MyFirstCdkAppBucket",
+            "path": "FirstAppStack/MyFirstCdkAppBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FirstAppStack/MyFirstCdkAppBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketEncryption": {
+                      "serverSideEncryptionConfiguration": [
+                        {
+                          "serverSideEncryptionByDefault": {
+                            "sseAlgorithm": "AES256"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "FirstAppStack/MyFirstCdkAppBucket/Notifications"
+              }
+            }
+          },
+          "MyFirstCdkAppBucketNameExport": {
+            "id": "MyFirstCdkAppBucketNameExport",
+            "path": "FirstAppStack/MyFirstCdkAppBucketNameExport"
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "FirstAppStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "FirstAppStack/CDKMetadata/Default"
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "FirstAppStack/CDKMetadata/Condition"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

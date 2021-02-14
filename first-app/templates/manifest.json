@@ -1,0 +1,111 @@
+{
+  "version": "9.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "FirstAppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "FirstAppStack.template.json"
+      },
+      "metadata": {
+        "/FirstAppStack/MyFirstCdkAppBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFirstCdkAppBucket36915070",
+            "trace": [
+              "new Bucket (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:1326:22)",
+              "new FirstAppStack (/Users/rafalkucharski/Stuff/aws-cdk/first-app/lib/first-app-stack.ts:8:20)",
+              "Object.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/bin/first-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/rafalkucharski/.nvm/versions/node/v14.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/FirstAppStack/MyFirstCdkAppBucketNameExport": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyFirstCdkAppBucketNameExport",
+            "trace": [
+              "new FirstAppStack (/Users/rafalkucharski/Stuff/aws-cdk/first-app/lib/first-app-stack.ts:11:5)",
+              "Object.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/bin/first-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Module.m._compile (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/index.ts:1056:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/index.ts:1059:12)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "main (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/bin.ts:198:14)",
+              "Object.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/ts-node/src/bin.ts:288:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1063:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)",
+              "Module.load (internal/modules/cjs/loader.js:928:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:769:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)",
+              "/Users/rafalkucharski/.nvm/versions/node/v14.15.0/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/FirstAppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ],
+        "/FirstAppStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
+              "process.<anonymous> (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:486:12)",
+              "process.emit (/Users/rafalkucharski/Stuff/aws-cdk/first-app/node_modules/source-map-support/source-map-support.js:495:21)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

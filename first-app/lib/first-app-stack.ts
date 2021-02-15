@@ -30,14 +30,6 @@ export class FirstAppStack extends cdk.Stack {
       publicReadAccess: true,
     });
 
-    // make sure build folder exists - would make sense to run this dockerized
-    new BucketDeployment(this, 'MyFirstCdkAppWebsiteBucketDeployment', {
-      sources: [
-        Source.asset(path.join(__dirname, '..', 'front', 'build'))
-      ],
-      destinationBucket: websiteBucket,
-    })
-
     const cloudFront = new CloudFrontWebDistribution(this, 'MyFirstCdkAppCloudfrontDist', {
       originConfigs: [{
         s3OriginSource: {
@@ -46,6 +38,15 @@ export class FirstAppStack extends cdk.Stack {
         behaviors: [ { isDefaultBehavior: true }],
       }]
     });
+
+    // make sure build folder exists - would make sense to run this dockerized
+    new BucketDeployment(this, 'MyFirstCdkAppWebsiteBucketDeployment', {
+      sources: [
+        Source.asset(path.join(__dirname, '..', 'front', 'build'))
+      ],
+      destinationBucket: websiteBucket,
+      distribution: cloudFront,
+    })
 
     const lambda = new NodejsFunction(this, 'MyFirstCdkAppLambda', {
       runtime: Runtime.NODEJS_14_X,
@@ -120,3 +121,6 @@ export class FirstAppStack extends cdk.Stack {
 
 // alt by zobaczyc terraforma w jsonie
 // cdk synthesize --output=./templates
+
+// by wszystko wyjebac
+// cdk destroy

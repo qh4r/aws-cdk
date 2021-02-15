@@ -6,6 +6,9 @@ import { Runtime } from "@aws-cdk/aws-lambda";
 import { BucketDeployment, Source } from "@aws-cdk/aws-s3-deployment";
 import { PolicyStatement } from "@aws-cdk/aws-iam";
 import { getPhotos } from "../api/get-photos";
+import { HttpApi, HttpMethod } from "@aws-cdk/aws-apigatewayv2";
+import { LambdaProxyIntegration } from "@aws-cdk/aws-apigatewayv2-integrations";
+import { CloudFrontWebDistribution } from "@aws-cdk/aws-cloudfront";
 
 export class FirstAppStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -20,6 +23,28 @@ export class FirstAppStack extends cdk.Stack {
         Source.asset(path.join(__dirname, '..', 'photos')),
       ],
       destinationBucket: bucket,
+    });
+
+    const websiteBucket = new Bucket(this, 'MyFirstCdkAppWebsiteBucket', {
+      websiteIndexDocument: 'index.html',
+      publicReadAccess: true,
+    });
+
+    // make sure build folder exists - would make sense to run this dockerized
+    new BucketDeployment(this, 'MyFirstCdkAppWebsiteBucketDeployment', {
+      sources: [
+        Source.asset(path.join(__dirname, '..', 'front', 'build'))
+      ],
+      destinationBucket: websiteBucket,
+    })
+
+    const cloudFront = new CloudFrontWebDistribution(this, 'MyFirstCdkAppCloudfrontDist', {
+      originConfigs: [{
+        s3OriginSource: {
+          s3BucketSource: websiteBucket,
+        },
+        behaviors: [ { isDefaultBehavior: true }],
+      }]
     });
 
     const lambda = new NodejsFunction(this, 'MyFirstCdkAppLambda', {
@@ -42,10 +67,46 @@ export class FirstAppStack extends cdk.Stack {
     lambda.addToRolePolicy(bucketContainerPermissions);
     lambda.addToRolePolicy(bucketPermissions);
 
+    const httpApi = new HttpApi(this, 'MyFirstCdkAppHttpApi', {
+      corsPreflight: {
+        allowOrigins: ['*'],
+        allowMethods: [HttpMethod.GET]
+      },
+      apiName: 'photos-api',
+      createDefaultStage: true,
+    });
+
+    const lambdaIntegration = new LambdaProxyIntegration({
+      handler: lambda,
+    });
+
+    httpApi.addRoutes({
+      path: '/get-photos',
+      methods: [
+        HttpMethod.GET,
+      ],
+      integration: lambdaIntegration,
+    });
+
     new cdk.CfnOutput(this, 'MyFirstCdkAppBucketNameExport', {
       value: bucket.bucketName,
       exportName: 'MyFirstCdkAppBucketName',
-    })
+    });
+
+    new cdk.CfnOutput(this, 'MyFirstCdkAppWebsiteBucketNameExport', {
+      value: websiteBucket.bucketName,
+      exportName: 'MyFirstCdkAppWebsiteBucketName',
+    });
+
+    new cdk.CfnOutput(this, 'MyFirstCdkAppWebsiteUrl', {
+      value: cloudFront.distributionDomainName,
+      exportName: 'MyFirstCdkAppWebsiteUrl',
+    });
+
+    new cdk.CfnOutput(this, 'MyFirstCdkAppApi', {
+      value: httpApi.url!,
+      exportName: 'MyFirstCdkAppApiEndpoint'
+    });
   }
 }
 

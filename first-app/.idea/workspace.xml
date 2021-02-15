@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df2cbd3b-6442-4c0b-afa4-b309cc565e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/get-photos/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/43. Professional Subscription Agreement with Reyker (Final version 16.05.18)(612696821_1)merged.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/Black-Widow-Scarlett-Johansson-sexy-poster-Silk-Fabric-Printing-Wall-Art-Decor.jpg_640x640.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/photos/Scarlett-Johansson-Sexy-Pictures.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/first-app-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/first-app-stack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613297499396</updated>
-      <workItem from="1613297500781" duration="7340000" />
+      <workItem from="1613297500781" duration="10865000" />
     </task>
     <servers />
   </component>
@@ -87,6 +87,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="597" y="288" width="598" height="490" key="find.popup" timestamp="1613415283053">
+      <screen x="0" y="23" width="1792" height="1020" />
+    </state>
+    <state x="597" y="288" width="598" height="490" key="find.popup/0.23.1792.1020/-60.-1057.1920.1057@0.23.1792.1020" timestamp="1613415283053" />
     <state x="561" y="246" key="run.anything.popup" timestamp="1613297770850">
       <screen x="0" y="23" width="1792" height="1020" />
     </state>

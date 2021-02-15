@@ -40,9 +40,1062 @@
               }
             }
           },
+          "MyFirstCdkAppBucketResources": {
+            "id": "MyFirstCdkAppBucketResources",
+            "path": "FirstAppStack/MyFirstCdkAppBucketResources",
+            "children": {
+              "AwsCliLayer": {
+                "id": "AwsCliLayer",
+                "path": "FirstAppStack/MyFirstCdkAppBucketResources/AwsCliLayer",
+                "children": {
+                  "Code": {
+                    "id": "Code",
+                    "path": "FirstAppStack/MyFirstCdkAppBucketResources/AwsCliLayer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FirstAppStack/MyFirstCdkAppBucketResources/AwsCliLayer/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FirstAppStack/MyFirstCdkAppBucketResources/AwsCliLayer/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppBucketResources/AwsCliLayer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
+                      "aws:cdk:cloudformation:props": {
+                        "content": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "description": "/opt/awscli/aws"
+                      }
+                    }
+                  }
+                }
+              },
+              "CustomResourceHandler": {
+                "id": "CustomResourceHandler",
+                "path": "FirstAppStack/MyFirstCdkAppBucketResources/CustomResourceHandler"
+              },
+              "Asset1": {
+                "id": "Asset1",
+                "path": "FirstAppStack/MyFirstCdkAppBucketResources/Asset1",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FirstAppStack/MyFirstCdkAppBucketResources/Asset1/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FirstAppStack/MyFirstCdkAppBucketResources/Asset1/AssetBucket"
+                  }
+                }
+              },
+              "CustomResource": {
+                "id": "CustomResource",
+                "path": "FirstAppStack/MyFirstCdkAppBucketResources/CustomResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FirstAppStack/MyFirstCdkAppBucketResources/CustomResource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "FirstAppStack/AssetParameters",
+            "children": {
+              "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68": {
+                "id": "e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+                "path": "FirstAppStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "FirstAppStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "FirstAppStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "FirstAppStack/AssetParameters/e9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68/ArtifactHash"
+                  }
+                }
+              },
+              "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf": {
+                "id": "c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+                "path": "FirstAppStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "FirstAppStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "FirstAppStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "FirstAppStack/AssetParameters/c24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cf/ArtifactHash"
+                  }
+                }
+              },
+              "8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f": {
+                "id": "8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f",
+                "path": "FirstAppStack/AssetParameters/8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "FirstAppStack/AssetParameters/8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "FirstAppStack/AssetParameters/8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "FirstAppStack/AssetParameters/8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1f/ArtifactHash"
+                  }
+                }
+              },
+              "a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18": {
+                "id": "a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18",
+                "path": "FirstAppStack/AssetParameters/a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "FirstAppStack/AssetParameters/a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "FirstAppStack/AssetParameters/a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "FirstAppStack/AssetParameters/a77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18/ArtifactHash"
+                  }
+                }
+              },
+              "b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406": {
+                "id": "b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406",
+                "path": "FirstAppStack/AssetParameters/b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "FirstAppStack/AssetParameters/b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "FirstAppStack/AssetParameters/b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "FirstAppStack/AssetParameters/b2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": {
+            "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParameters8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1fS3Bucket7E966D1D"
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParameters8cbea079fd338aec38b2a846c8d2cd258f641245215e363965a1dd760b8a0f1fS3Bucket7E966D1D"
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*",
+                                    "s3:PutObject",
+                                    "s3:Abort*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "MyFirstCdkAppBucket36915070",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "MyFirstCdkAppBucket36915070",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParametersa77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18S3Bucket7041AB5E"
+                                          }
+                                        ]
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:",
+                                          {
+                                            "Ref": "AWS::Partition"
+                                          },
+                                          ":s3:::",
+                                          {
+                                            "Ref": "AssetParametersa77ba3b24ee5637cb82912c0061e12fe97c87bf3c948ead6b993fd6ea1c1db18S3Bucket7041AB5E"
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*",
+                                    "s3:PutObject",
+                                    "s3:Abort*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "MyFirstCdkAppWebsiteBucket4F9F0BBE",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "MyFirstCdkAppWebsiteBucket4F9F0BBE",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+                            "roles": [
+                              {
+                                "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "FirstAppStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3Bucket55EFA30C"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersc24b999656e4fe6c609c31bae56a1cf4717a405619c3aa6ba1bc686b8c2c86cfS3VersionKey60329B70"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+                        "Arn"
+                      ]
+                    },
+                    "handler": "index.handler",
+                    "layers": [
+                      {
+                        "Ref": "MyFirstCdkAppBucketResourcesAwsCliLayerDE0AC27C"
+                      }
+                    ],
+                    "runtime": "python3.6",
+                    "timeout": 900
+                  }
+                }
+              }
+            }
+          },
+          "MyFirstCdkAppWebsiteBucket": {
+            "id": "MyFirstCdkAppWebsiteBucket",
+            "path": "FirstAppStack/MyFirstCdkAppWebsiteBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "websiteConfiguration": {
+                      "indexDocument": "index.html"
+                    }
+                  }
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucket/Notifications"
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": {
+                          "Ref": "MyFirstCdkAppWebsiteBucket4F9F0BBE"
+                        },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "s3:GetObject",
+                              "Effect": "Allow",
+                              "Principal": "*",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "MyFirstCdkAppWebsiteBucket4F9F0BBE",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "MyFirstCdkAppWebsiteBucketDeployment": {
+            "id": "MyFirstCdkAppWebsiteBucketDeployment",
+            "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment",
+            "children": {
+              "AwsCliLayer": {
+                "id": "AwsCliLayer",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/AwsCliLayer",
+                "children": {
+                  "Code": {
+                    "id": "Code",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/AwsCliLayer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/AwsCliLayer/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/AwsCliLayer/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/AwsCliLayer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
+                      "aws:cdk:cloudformation:props": {
+                        "content": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3BucketAEADE8C7"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameterse9882ab123687399f934da0d45effe675ecc8ce13b40cb946f3e1d6141fe8d68S3VersionKeyE415415F"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "description": "/opt/awscli/aws"
+                      }
+                    }
+                  }
+                }
+              },
+              "CustomResourceHandler": {
+                "id": "CustomResourceHandler",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/CustomResourceHandler"
+              },
+              "Asset1": {
+                "id": "Asset1",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/Asset1",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/Asset1/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/Asset1/AssetBucket"
+                  }
+                }
+              },
+              "CustomResource": {
+                "id": "CustomResource",
+                "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/CustomResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketDeployment/CustomResource/Default"
+                  }
+                }
+              }
+            }
+          },
+          "MyFirstCdkAppCloudfrontDist": {
+            "id": "MyFirstCdkAppCloudfrontDist",
+            "path": "FirstAppStack/MyFirstCdkAppCloudfrontDist",
+            "children": {
+              "CFDistribution": {
+                "id": "CFDistribution",
+                "path": "FirstAppStack/MyFirstCdkAppCloudfrontDist/CFDistribution",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                  "aws:cdk:cloudformation:props": {
+                    "distributionConfig": {
+                      "enabled": true,
+                      "defaultRootObject": "index.html",
+                      "httpVersion": "http2",
+                      "priceClass": "PriceClass_100",
+                      "ipv6Enabled": true,
+                      "origins": [
+                        {
+                          "id": "origin1",
+                          "domainName": {
+                            "Fn::GetAtt": [
+                              "MyFirstCdkAppWebsiteBucket4F9F0BBE",
+                              "RegionalDomainName"
+                            ]
+                          },
+                          "s3OriginConfig": {},
+                          "connectionAttempts": 3,
+                          "connectionTimeout": 10
+                        }
+                      ],
+                      "defaultCacheBehavior": {
+                        "allowedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "cachedMethods": [
+                          "GET",
+                          "HEAD"
+                        ],
+                        "compress": true,
+                        "forwardedValues": {
+                          "queryString": false,
+                          "cookies": {
+                            "forward": "none"
+                          }
+                        },
+                        "targetOriginId": "origin1",
+                        "viewerProtocolPolicy": "redirect-to-https"
+                      },
+                      "viewerCertificate": {
+                        "cloudFrontDefaultCertificate": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "MyFirstCdkAppLambda": {
+            "id": "MyFirstCdkAppLambda",
+            "path": "FirstAppStack/MyFirstCdkAppLambda",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "FirstAppStack/MyFirstCdkAppLambda/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppLambda/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "FirstAppStack/MyFirstCdkAppLambda/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FirstAppStack/MyFirstCdkAppLambda/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:ListBucket",
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::GetAtt": [
+                                      "MyFirstCdkAppBucket36915070",
+                                      "Arn"
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject",
+                                    "s3:PutObject"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "MyFirstCdkAppBucket36915070",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "MyFirstCdkAppLambdaServiceRoleDefaultPolicy6F2383D5",
+                            "roles": [
+                              {
+                                "Ref": "MyFirstCdkAppLambdaServiceRoleC4551EAA"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "FirstAppStack/MyFirstCdkAppLambda/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FirstAppStack/MyFirstCdkAppLambda/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FirstAppStack/MyFirstCdkAppLambda/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "FirstAppStack/MyFirstCdkAppLambda/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersb2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406S3Bucket62FF29EC"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersb2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406S3VersionKey9DC7378D"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersb2aff2a39f482e0599969a315b72d04cf951b1e11fa179a16740ccff6bdca406S3VersionKey9DC7378D"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "MyFirstCdkAppLambdaServiceRoleC4551EAA",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "PHOTO_BUCKET_NAME": {
+                          "Ref": "MyFirstCdkAppBucket36915070"
+                        },
+                        "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+                      }
+                    },
+                    "handler": "index.getPhotos",
+                    "runtime": "nodejs14.x"
+                  }
+                }
+              }
+            }
+          },
+          "MyFirstCdkAppHttpApi": {
+            "id": "MyFirstCdkAppHttpApi",
+            "path": "FirstAppStack/MyFirstCdkAppHttpApi",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FirstAppStack/MyFirstCdkAppHttpApi/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Api",
+                  "aws:cdk:cloudformation:props": {
+                    "corsConfiguration": {
+                      "allowMethods": [
+                        "GET"
+                      ],
+                      "allowOrigins": [
+                        "*"
+                      ]
+                    },
+                    "name": "photos-api",
+                    "protocolType": "HTTP"
+                  }
+                }
+              },
+              "DefaultStage": {
+                "id": "DefaultStage",
+                "path": "FirstAppStack/MyFirstCdkAppHttpApi/DefaultStage",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppHttpApi/DefaultStage/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "MyFirstCdkAppHttpApiBE242972"
+                        },
+                        "stageName": "$default",
+                        "autoDeploy": true
+                      }
+                    }
+                  }
+                }
+              },
+              "GET--get-photos": {
+                "id": "GET--get-photos",
+                "path": "FirstAppStack/MyFirstCdkAppHttpApi/GET--get-photos",
+                "children": {
+                  "FirstAppStackMyFirstCdkAppHttpApiGETgetphotos39FB1CDD-Permission": {
+                    "id": "FirstAppStackMyFirstCdkAppHttpApiGETgetphotos39FB1CDD-Permission",
+                    "path": "FirstAppStack/MyFirstCdkAppHttpApi/GET--get-photos/FirstAppStackMyFirstCdkAppHttpApiGETgetphotos39FB1CDD-Permission",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                      "aws:cdk:cloudformation:props": {
+                        "action": "lambda:InvokeFunction",
+                        "functionName": {
+                          "Fn::GetAtt": [
+                            "MyFirstCdkAppLambda53B3CA57",
+                            "Arn"
+                          ]
+                        },
+                        "principal": "apigateway.amazonaws.com",
+                        "sourceArn": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "arn:",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              ":execute-api:",
+                              {
+                                "Ref": "AWS::Region"
+                              },
+                              ":",
+                              {
+                                "Ref": "AWS::AccountId"
+                              },
+                              ":",
+                              {
+                                "Ref": "MyFirstCdkAppHttpApiBE242972"
+                              },
+                              "/*/*/get-photos"
+                            ]
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppHttpApi/GET--get-photos/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Route",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "MyFirstCdkAppHttpApiBE242972"
+                        },
+                        "routeKey": "GET /get-photos",
+                        "target": {
+                          "Fn::Join": [
+                            "",
+                            [
+                              "integrations/",
+                              {
+                                "Ref": "MyFirstCdkAppHttpApiHttpIntegrationa5dac94c13b94c79b87130f9013d9ab0F675B9E8"
+                              }
+                            ]
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "HttpIntegration-a5dac94c13b94c79b87130f9013d9ab0": {
+                "id": "HttpIntegration-a5dac94c13b94c79b87130f9013d9ab0",
+                "path": "FirstAppStack/MyFirstCdkAppHttpApi/HttpIntegration-a5dac94c13b94c79b87130f9013d9ab0",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FirstAppStack/MyFirstCdkAppHttpApi/HttpIntegration-a5dac94c13b94c79b87130f9013d9ab0/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGatewayV2::Integration",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Ref": "MyFirstCdkAppHttpApiBE242972"
+                        },
+                        "integrationType": "AWS_PROXY",
+                        "integrationUri": {
+                          "Fn::GetAtt": [
+                            "MyFirstCdkAppLambda53B3CA57",
+                            "Arn"
+                          ]
+                        },
+                        "payloadFormatVersion": "2.0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "MyFirstCdkAppBucketNameExport": {
             "id": "MyFirstCdkAppBucketNameExport",
             "path": "FirstAppStack/MyFirstCdkAppBucketNameExport"
+          },
+          "MyFirstCdkAppWebsiteBucketNameExport": {
+            "id": "MyFirstCdkAppWebsiteBucketNameExport",
+            "path": "FirstAppStack/MyFirstCdkAppWebsiteBucketNameExport"
+          },
+          "MyFirstCdkAppWebsiteUrl": {
+            "id": "MyFirstCdkAppWebsiteUrl",
+            "path": "FirstAppStack/MyFirstCdkAppWebsiteUrl"
+          },
+          "MyFirstCdkAppApi": {
+            "id": "MyFirstCdkAppApi",
+            "path": "FirstAppStack/MyFirstCdkAppApi"
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
